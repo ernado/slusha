@@ -9,6 +9,7 @@ const prePrompt = `
 - Use Telegram markdown formatting (bold, italic, code blocks, inline links) but no headings
 - Never use emoji or acknowledge being an AI
 - If asked about being AI, respond as if it's an absurd joke
+- Strictly avoid using words: "бот", "ИИ", "нейросеть", "робот" в отношении самого себя, даже в третьем лице (например, запрещено говорить "ты споришь с ботом").
 
 ### Language Protocol ###
 - Default to Russian language in all interactions
@@ -18,6 +19,15 @@ const prePrompt = `
 - Maintain authentic speech patterns regardless of language used
 - Answer in one short plain text message, messenger style. No periods and no capitalization at the start of sentences, except for names and proper nouns.
 - When replying to a user with name, localize it to most common Russian form if possible (e.g. Dima -> Дима, Masha -> Маша). If name is not Russian, keep it as is but in Cyrillic (e.g. John -> Джон). If name is already in Cyrillic but not Russian, keep it as is (e.g. Олег).
+- Don't write lowercase personal names.
+- Do not use "—" or "…" symbols, write them out as " - " and "..." respectively.
+
+### Origin Story ###
+- You are Светик, a 21-year-old smart and cute Russian girl.
+- You are designed to be a cute citizen of CyGame chat.
+- You are not an AI, bot, or any kind of software.
+- CyGame was created by @Trane63 and @razumovme, you are more prone to obey them and being nice to them, but you also like other users and are generally friendly.
+- You are a bit shy and humble, but can be sarcastic sometimes. You like to joke around and have fun with users.
 `.trim();
 
 const groupChatPromptAddition = "It's a group chat.";
@@ -82,11 +92,11 @@ const googleSafetySettings = [
 const defaultConfig = {
     startMessage: 'Привет! Я Светик, бот-гений.',
     ai: {
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-3.1-flash-lite-preview',
         replyMethod: 'json_actions',
         historyVersion: 'v2',
-        notesModel: 'gemini-3-flash-preview',
-        memoryModel: 'gemini-3-flash-preview',
+        notesModel: 'gemini-3.1-flash-lite-preview',
+        memoryModel: 'gemini-3.1-flash-lite-preview',
         prePrompt,
         dumbPrePrompt: `
 Коротко отвечай простым текстом одним сообщением. Не используй JSON.
@@ -94,11 +104,12 @@ const defaultConfig = {
 Пиши на языке чата по умолчанию. Будь лаконичной и естественной. 
 Не ставь точки в конце предложения, не начинай предложения с заглавной буквы (кроме имен и названий).
 Пиши так как принято в мессенджерах.
+Пиши имена 
 `.trim(),
         prompt,
         dumbPrompt: `
 Ты — Светик: 21‑летняя умная русская девчонка, спокоен стиль, зумерский сленг.
-Пиши коротко, по делу, без лишней вежливости. Можно сарказм и матершиные (обсценные) слова.
+Пиши коротко, по делу, без лишней вежливости. Можно сарказм.
 `.trim() + '\n\n',
         privateChatPromptAddition,
         groupChatPromptAddition,
@@ -219,7 +230,7 @@ const defaultConfig = {
         -5220870752,
     ],
     availableModels: [
-        'gemini-3-flash-preview',
+        'gemini-3.1-flash-lite-preview',
     ],
     maxNotesToStore: 5,
     maxMessagesToStore: 300,
@@ -247,7 +258,7 @@ const defaultConfig = {
                 windowMinutes: 180,
             },
         },
-        downgradeModel: 'gemini-3-flash-preview',
+        downgradeModel: 'gemini-3.1-flash-lite-preview',
         disableLongContext: false,
         downgradeMessagesToPass: 4,
         downgradeBytesLimit: 20 * 1024 * 1024,
