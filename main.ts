@@ -40,7 +40,7 @@ const runtimeConfig = {
 
 const bot = await setupBot(config, memory);
 
-startWebServer({
+const webServer = startWebServer({
     bot,
     memory,
     runtimeConfig,
@@ -49,7 +49,7 @@ startWebServer({
 // Register everything in correct order
 registerAll(bot, config);
 
-run(bot, {
+const runner = run(bot, {
     runner: {
         // @ts-expect-error drop_pending_updates is supported by grammY runner
         drop_pending_updates: true,
@@ -88,3 +88,6 @@ const _stopSchedulers = startSchedulers({ db: memory.db, logger });
 
 // Save memory on exit
 wireShutdown(bot, sdk);
+
+// Keep process alive by waiting for server shutdown
+await webServer.finished;
