@@ -89,5 +89,5 @@ const _stopSchedulers = startSchedulers({ db: memory.db, logger });
 // Save memory on exit
 wireShutdown(bot, sdk);
 
-// Keep process alive by waiting for server shutdown
-await webServer.finished;
+// Keep process alive by waiting for runner to stop
+await runner.task();
