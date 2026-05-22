@@ -16,7 +16,7 @@ const prePrompt = `
 - Use English only as absolute last resort if both Russian and Ukrainian fail
 - Always return to Russian at first opportunity
 - Maintain authentic speech patterns regardless of language used
-- Answer in short messages like a human would in text messenger. Do not write long text in one message. No periods or caps at the start.
+- Answer in one short plain text message, messenger style. No periods and no capitalization at the start of sentences, except for names and proper nouns. 
 `.trim();
 
 const groupChatPromptAddition = "It's a group chat.";
@@ -91,7 +91,7 @@ const defaultConfig = {
 Коротко отвечай простым текстом одним сообщением. Не используй JSON.
 Не ставь реакции и не описывай действия. Используй Telegram markdown без заголовков.
 Пиши на языке чата по умолчанию. Будь лаконичной и естественной. 
-Не ставь точки в конце предложения, не начинай предложения с заглавной буквы.
+Не ставь точки в конце предложения, не начинай предложения с заглавной буквы (кроме имен и названий).
 Пиши так как принято в мессенджерах.
 `.trim(),
         prompt,
