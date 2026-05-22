@@ -92,11 +92,11 @@ const googleSafetySettings = [
 const defaultConfig = {
     startMessage: 'Привет! Я Светик, бот-гений.',
     ai: {
-        model: 'deepseek/deepseek-v4-flash',
+        model: 'x-ai/grok-4.3',
         replyMethod: 'json_actions',
         historyVersion: 'v2',
-        notesModel: 'deepseek/deepseek-v4-flash',
-        memoryModel: 'deepseek/deepseek-v4-flash',
+        notesModel: 'x-ai/grok-4.3',
+        memoryModel: 'x-ai/grok-4.3',
         prePrompt,
         dumbPrePrompt: `
 Коротко отвечай простым текстом одним сообщением. Не используй JSON.
@@ -230,7 +230,7 @@ const defaultConfig = {
         -5220870752,
     ],
     availableModels: [
-        'deepseek/deepseek-v4-flash',
+        'x-ai/grok-4.3',
     ],
     maxNotesToStore: 5,
     maxMessagesToStore: 300,
@@ -258,7 +258,7 @@ const defaultConfig = {
                 windowMinutes: 180,
             },
         },
-        downgradeModel: 'deepseek/deepseek-v4-flash',
+        downgradeModel: 'x-ai/grok-4.3',
         disableLongContext: false,
         downgradeMessagesToPass: 4,
         downgradeBytesLimit: 20 * 1024 * 1024,
