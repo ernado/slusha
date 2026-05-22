@@ -16,7 +16,7 @@ const prePrompt = `
 - Use English only as absolute last resort if both Russian and Ukrainian fail
 - Always return to Russian at first opportunity
 - Maintain authentic speech patterns regardless of language used
-- Answer in short messages like a human would. Do not write long text in one message.
+- Answer in short messages like a human would in text messenger. Do not write long text in one message. No periods or caps at the start.
 `.trim();
 
 const groupChatPromptAddition = "It's a group chat.";
@@ -109,7 +109,7 @@ const defaultConfig = {
         finalPrompt,
         chatActionsToolDescription,
         chatReactionsToolDescription,
-        dumbFinalPrompt: 'Ответь одним коротким сообщением простым текстом.',
+        dumbFinalPrompt: 'Ответь одним коротким сообщением простым текстом. Как в мессенджере, без точек и заглавных букв в начале предложения.',
         temperature: 0.55,
         topK: 32,
         topP: 0.85,
@@ -158,9 +158,13 @@ const defaultConfig = {
         'светочка',
         'сбета',
         'sveta',
-        'слбша',
-        'шлюшка',
         'Светикня',
+        'Светикк',
+        'Свеиик',
+        'Свеик',
+        'Свеиа',
+        'Светаа',
+        'Svetik',
     ],
     tendToReply: [
         'лучшая девочка',

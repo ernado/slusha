@@ -186,7 +186,7 @@ export const configSchema = z.object({
     trustedIds: z.array(z.number().int()).max(10000).default([]),
     availableModels: z.array(z.string().min(1).max(200)).min(1).max(256)
         .default([
-            'gemini-3.1-flash-lite-preview',
+            'gemini-3-flash-preview',
         ]),
     maxNotesToStore: boundedPositiveInt(1, 200).default(5),
     maxMessagesToStore: boundedPositiveInt(1, 10000).default(100),
