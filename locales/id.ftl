@@ -56,7 +56,7 @@ character-already-exists = Karakter ini sudah diatur
 character-not-found = Tidak bisa mendapatkan karakter
 character-download-error = Kesalahan mengunduh karakter. Coba lagi
 character-names-help = Tulis varian nama "{ $characterName }", yang bisa digunakan pengguna sebagai panggilan untuk karakter ini. Varian harus dalam bahasa Rusia, Inggris, bentuk diminutif sayang dan bentuk serupa yang jelas.
-    Contoh: nama "Cute Slusha". Varian: ["Cute Slusha", "Slusha", "Слюша", "слюшаня", "слюшка", "шлюша", "слюш"]
+    Contoh: nama "Cute Slusha". Varian: ["Cute Slusha", "Slusha", "Светик", "Светикня", "слюшка", "шлюша", "слюш"]
     Contoh: nama "Georgiy". Varian: ["Georgiy", "Georgie", "George", "Geordie", "Geo", "Егор", "Герасим", "Жора", "Жорка", "Жорочка", "Гошा", "Гошенька", "Гера", "Герочка", "Гога"]
 character-names-error = Kesalahan mendapatkan nama untuk karakter. Coba lagi
 character-names-set = Kesalahan mengatur nama untuk karakter. Coba lagi

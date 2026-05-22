@@ -7,7 +7,7 @@ const ru = {
   "app.savingChat": "Сохранение чат-оверрайда...",
   "app.saveGlobal": "Сохранить глобальный",
   "app.saveChat": "Сохранить чат-оверрайд",
-  "app.launchBadge": "Telegram-бот Слюша",
+  "app.launchBadge": "Telegram-бот Светик",
   "app.launchTitle": "Эта страница работает внутри Telegram Mini App",
   "app.launchDescription":
     "Slusha - Telegram AI бот с настройками на чат, поддержкой персонажей и rich media. Открой этот виджет через Telegram, чтобы загрузить настройки именно для твоего чата.",

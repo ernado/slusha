@@ -56,7 +56,7 @@ character-already-exists = This character is already set
 character-not-found = Could not get character
 character-download-error = Error downloading character. Try again
 character-names-help = Write variants of the name "{ $characterName }", which users can use as appeals to this character. Variants should be in Russian, English, diminutive affectionate and obvious similar forms.
-    Example: name "Cute Slusha". Variants: ["Cute Slusha", "Slusha", "Слюша", "слюшаня", "слюшка", "шлюша", "слюш"]
+    Example: name "Cute Slusha". Variants: ["Cute Slusha", "Slusha", "Светик", "Светикня", "слюшка", "шлюша", "слюш"]
     Example: name "Georgiy". Variants: ["Georgiy", "Georgie", "George", "Geordie", "Geo", "Егор", "Герасим", "Жора", "Жорка", "Жорочка", "Гоша", "Гошенька", "Гера", "Герочка", "Гога"]
 character-names-error = Error getting names for character. Try again
 character-names-set = Error setting names for character. Try again
