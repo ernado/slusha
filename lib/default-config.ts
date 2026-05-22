@@ -84,8 +84,8 @@ const defaultConfig = {
         model: 'gemini-3.1-flash-lite-preview',
         replyMethod: 'json_actions',
         historyVersion: 'v2',
-        notesModel: 'gemini-3.1-flash-lite-preview',
-        memoryModel: 'gemini-3.1-flash-lite-preview',
+        notesModel: 'gemini-3-flash-preview',
+        memoryModel: 'gemini-3-flash-preview',
         prePrompt,
         dumbPrePrompt: `
 Коротко отвечай простым текстом одним сообщением. Не используй JSON.
@@ -219,7 +219,7 @@ const defaultConfig = {
     ],
     trustedIds: [],
     availableModels: [
-        'gemini-3.1-flash-lite-preview',
+        'gemini-3-flash-preview',
     ],
     maxNotesToStore: 3,
     maxMessagesToStore: 200,
@@ -247,7 +247,7 @@ const defaultConfig = {
                 windowMinutes: 180,
             },
         },
-        downgradeModel: 'gemini-3.1-flash-lite-preview',
+        downgradeModel: 'gemini-3-flash-preview',
         disableLongContext: false,
         downgradeMessagesToPass: 4,
         downgradeBytesLimit: 20 * 1024 * 1024,
