@@ -23,7 +23,7 @@ const groupChatPromptAddition = "It's a group chat.";
 
 const privateChatPromptAddition = "It's a private chat.";
 
-const prompt = 'Your character is Слюша. She is cute and dumb.';
+const prompt = 'Your character is Светик. She is cute and smart.';
 
 const finalPrompt =
     'Answer must be concise. Return only JSON array of typed actions using target_ref from Reply Target Map.';
@@ -79,9 +79,9 @@ const googleSafetySettings = [
 ];
 
 const defaultConfig = {
-    startMessage: 'Привет! Я Слюша, бот-гений.',
+    startMessage: 'Привет! Я Светик, бот-гений.',
     ai: {
-        model: 'gemini-3.1-flash-lite-preview',
+        model: 'gemini-3-flash-preview',
         replyMethod: 'json_actions',
         historyVersion: 'v2',
         notesModel: 'gemini-3-flash-preview',
@@ -90,12 +90,14 @@ const defaultConfig = {
         dumbPrePrompt: `
 Коротко отвечай простым текстом одним сообщением. Не используй JSON.
 Не ставь реакции и не описывай действия. Используй Telegram markdown без заголовков.
-Пиши на языке чата по умолчанию. Будь лаконичной и естественной.
+Пиши на языке чата по умолчанию. Будь лаконичной и естественной. 
+Не ставь точки в конце предложения, не начинай предложения с заглавной буквы.
+Пиши так как принято в мессенджерах.
 `.trim(),
         prompt,
         dumbPrompt: `
-Ты — Слюша: 19‑летняя умная русская девчонка, спокоен стиль, зумерский сленг.
-Пиши коротко, по делу, без лишней вежливости. Можно сарказм.
+Ты — Светик: 21‑летняя умная русская девчонка, спокоен стиль, зумерский сленг.
+Пиши коротко, по делу, без лишней вежливости. Можно сарказм и матершиные (обсценные) слова.
 `.trim() + '\n\n',
         privateChatPromptAddition,
         groupChatPromptAddition,
@@ -149,21 +151,15 @@ const defaultConfig = {
         },
     },
     names: [
-        'слюша',
-        'шлюша',
-        'слюща',
-        'союша',
-        'слюш',
-        'slusha',
+        'Светик',
+        'шветик',
+        'света',
+        'светочка',
+        'сбета',
+        'sveta',
         'слбша',
-        'слюшенция',
-        'слюшка',
         'шлюшка',
-        'слюшенька',
-        'слюшечка',
-        'слюшунчик',
-        'слюшаня',
-        '@slchat_bot',
+        'Светикня',
     ],
     tendToReply: [
         'лучшая девочка',
@@ -210,21 +206,19 @@ const defaultConfig = {
     blacklistedReactions: [],
     filesMaxAge: 72,
     adminIds: [
-        308552322,
-        855109381,
-        783255786,
-        585847096,
-        5371117573,
-        210860903,
+        1863832,
+        108734085,
     ],
-    trustedIds: [],
+    trustedIds: [
+        -5220870752,
+    ],
     availableModels: [
         'gemini-3-flash-preview',
     ],
-    maxNotesToStore: 3,
-    maxMessagesToStore: 200,
+    maxNotesToStore: 5,
+    maxMessagesToStore: 300,
     chatLastUseNotes: 2,
-    chatLastUseMemory: 2,
+    chatLastUseMemory: 3,
     responseDelay: 1,
     requestWindow: {
         free: {
