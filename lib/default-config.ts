@@ -92,11 +92,11 @@ const googleSafetySettings = [
 const defaultConfig = {
     startMessage: 'Привет! Я Светик, бот-гений.',
     ai: {
-        model: 'gemini-3.1-flash-lite-preview',
+        model: 'gemini-3.1-flash-lite',
         replyMethod: 'json_actions',
         historyVersion: 'v2',
-        notesModel: 'gemini-3.1-flash-lite-preview',
-        memoryModel: 'gemini-3.1-flash-lite-preview',
+        notesModel: 'gemini-3.1-flash-lite',
+        memoryModel: 'gemini-3.1-flash-lite',
         prePrompt,
         dumbPrePrompt: `
 Коротко отвечай простым текстом одним сообщением. Не используй JSON.
@@ -230,7 +230,7 @@ const defaultConfig = {
         -5220870752,
     ],
     availableModels: [
-        'gemini-3.1-flash-lite-preview',
+        'gemini-3.1-flash-lite',
     ],
     maxNotesToStore: 5,
     maxMessagesToStore: 300,
@@ -258,7 +258,7 @@ const defaultConfig = {
                 windowMinutes: 180,
             },
         },
-        downgradeModel: 'gemini-3.1-flash-lite-preview',
+        downgradeModel: 'gemini-3.1-flash-lite',
         disableLongContext: false,
         downgradeMessagesToPass: 4,
         downgradeBytesLimit: 20 * 1024 * 1024,
